@@ -1,0 +1,106 @@
+.landing {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.content {
+  padding: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 60px;
+}
+
+.card {
+  height: 20rem;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 30px black;
+  animation: card 2s forwards;
+}
+
+.heading {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5rem;
+  text-shadow: 0 0 30px black, 0 0 15px black;
+  margin: 0;
+  padding: 0 2rem;
+  transform: translate(200%);
+  animation: heading 2s forwards 1s;
+}
+
+.trading {
+  letter-spacing: 0.6rem;
+  font-weight: 700;
+}
+
+.simulator {
+  letter-spacing: -0.15rem;
+  font-weight: 400;
+}
+
+.buttonContainer {
+  padding: 10px;
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+
+.button {
+  transform: translateY(200%);
+  animation: button 2s forwards 1s;
+}
+
+@media screen and (max-width: 650px) {
+  .card {
+    display: none;
+  }
+  .heading {
+    animation: heading 2s forwards;
+  }
+  .button {
+    animation: button 2s forwards 0.2s;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .heading {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@keyframes heading {
+  from {
+    transform: translate(200%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes card {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes button {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

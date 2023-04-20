@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String @id @default(uuid())
+  username     String @unique
+  password     String
+  baseCurrency String
+  PLN          Float
+  USD          Float
+  EUR          Float
+  GBP          Float
+  CHF          Float
+  JPY          Float
+  AED          Float
+  QAR          Float
+  ARS          Float
+  AUD          Float
+  BRL          Float
+  HUF          Float
+  CAD          Float
+  CLP          Float
+  HRK          Float
+  CZK          Float
+  DKK          Float
+  MDL          Float
+  RUB          Float
+  SEK          Float
+  TRY          Float
+  VES          Float
+  BYN          Float
+}
